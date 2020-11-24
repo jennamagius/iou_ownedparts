@@ -1,0 +1,1 @@
+Just a tiny OwnedSplit wrapper for iou, since iou doesn't appear to provide a way to have owned parts. We have to make forwarder methods instead of giving out proper references to the real queues (or impling DerefMut) so that users can't use std::mem::swap to break a 'static queue away from its owned IoUring.
